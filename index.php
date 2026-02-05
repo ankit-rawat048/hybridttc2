@@ -94,7 +94,7 @@
             background: rgb(255 192 0);
             padding-right: 10%;
             transition: right 0.6s ease;
-            display:block;
+            display: block;
         }
 
         .contentbar.active {
@@ -148,6 +148,7 @@
             top: 0;
             transition: right 1s ease;
             animation: fadeout .4s ease forwards;
+            opacity: 0.3;
         }
 
         @keyframes fadeIn {
@@ -186,17 +187,78 @@
             color: #ffc000;
         }
 
+        /* last changes */
+        .desktop-nav {
+            display: flex;
+        }
+
+        .mobile-nav {
+            /* display: none; */
+        }
+
+
         @media (max-width: 600px) {
             .main {
-                justify-content:center;
+                justify-content: center;
             }
 
             #bgImg {
-                padding: 0 0 0 0;
+                padding: 0;
             }
 
-            .contentbar{
-                display:none;
+            /* MOBILE CONTENT BAR */
+            .contentbar {
+                display: block;
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                left: 0;
+                bottom: -100%;
+                right: auto;
+                top: auto;
+                padding-right: 0;
+                z-index: 999;
+                transition: bottom 0.5s ease;
+            }
+
+            .contentbar.active {
+                bottom: 0;
+            }
+
+            .content {
+                padding: 70px 20px 80px;
+            }
+
+            .closeContent {
+                top: 15px;
+                right: 15px;
+                z-index: 1000;
+            }
+
+            .footer {
+                width: 100%;
+            }
+
+            .social-list,
+            .copyright {
+                padding: 0;
+            }
+
+            /* last changes */
+            .desktop-nav {
+                /* display: none; */
+            }
+
+            .mobile-nav {
+                display: block;
+                width: 60%;
+                margin: 18px;
+                padding: 12px 16px;
+                font-size: 18px;
+                background: rgba(255, 255, 255, 0.85);
+                border: none;
+                outline: none;
+                cursor: pointer;
             }
         }
     </style>
@@ -213,8 +275,18 @@
                 <!-- NAVBAR -->
                 <?php include('includes/navbar.php'); ?>
                 <div class="bg-actions" id="action">
-                    <button id="leftbtn"><i class="fa-solid fa-chevron-left"></i></button>
+                    <!-- <select class="navbar mobile-nav" id="navList">
+                    <option value="">Select Section</option>
+                    <option data-target="about">About</option>
+                    <option data-target="contact">Contact</option>
+                    <option data-target="kundalini">Kundalini</option>
+                    <option data-target="multistyle">Multistyle</option>
+                    <option data-target="hatha">Hatha</option>
+                </select> -->
+                    <div>
+                        <button id="leftbtn"><i class="fa-solid fa-chevron-left"></i></button>
                     <button id="rightbtn"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
                 </div>
             </div>
 
@@ -224,6 +296,16 @@
                     class="abslute-cls" alt="">
 
                 <button class="closeContent" id="closeContent"><i class="fa-solid fa-xmark"></i></button>
+
+                <!-- <select class="navbar mobile-nav" id="navList">
+                    <option value="">Select Section</option>
+                    <option data-target="about">About</option>
+                    <option data-target="contact">Contact</option>
+                    <option data-target="kundalini">Kundalini</option>
+                    <option data-target="multistyle">Multistyle</option>
+                    <option data-target="hatha">Hatha</option>
+                </select> -->
+
 
                 <div class="content">
                     <div id="about" class="content-section">
@@ -262,8 +344,6 @@
             </div>
         </div>
     </div>
-
-
 
     <script>
         /* =====================

@@ -75,7 +75,7 @@
     .nav li {
         background: #000;
         padding: 6px 0px;
-        font-size: 30px;
+        /* font-size: 30px; */
         cursor: pointer;
         color: #fff;
         text-transform: uppercase;
@@ -115,7 +115,7 @@
         } else {
             nav.classList.add('show');
         };
-});
+  });
 
     closeNav.addEventListener('click', () => {
         nav.classList.remove('show');

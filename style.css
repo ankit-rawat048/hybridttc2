@@ -142,6 +142,10 @@ h1, h2, h3, h4, h5 {
     border-left: 5px solid #c9a66b;
 }
 
+.diff{
+    color:#000;
+}
+
 
 /* RESPONSIVE */
 /* SMALL SCREENS */

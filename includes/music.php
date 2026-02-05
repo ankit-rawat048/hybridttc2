@@ -6,7 +6,7 @@
     </div>
 
     <!-- Audio -->
-    <audio id="audio" src="images/spiderman_nwh.mp32" loop></audio>
+    <audio id="audio" src="images/spiderman_nwh.mp3" loop></audio>
 
     <style>
 
@@ -21,7 +21,7 @@
     gap: 4px;
     cursor: pointer;
     opacity: 0.85;
-    z-index: 1000;
+    /* z-index: -1; */
     padding:2px;
 }
 

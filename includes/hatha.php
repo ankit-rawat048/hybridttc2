@@ -126,7 +126,7 @@
     </section>
 
     <section class="content-block highlight">
-        <h2>Begin Your Journey</h2>
+        <h2 class="diff">Begin Your Journey</h2>
         <p>
             Take the first step toward becoming a certified Hatha Yoga teacher with
             our 200 Hour Hybrid Hatha Yoga Teacher Training in Rishikesh, India.

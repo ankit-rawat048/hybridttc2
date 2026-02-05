@@ -118,7 +118,7 @@
     </section>
 
     <section class="content-block highlight">
-        <h2>Begin Your Journey</h2>
+        <h2 class="diff">Begin Your Journey</h2>
         <p>
             Take the first step toward becoming a certified Kundalini Yoga instructor
             with our 200 Hour Hybrid Kundalini Yoga Teacher Training in Rishikesh, India.
