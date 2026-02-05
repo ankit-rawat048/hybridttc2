@@ -122,7 +122,7 @@
     </section>
 
     <section class="content-block highlight">
-        <h2 class="diff">Begin Your Journey</h2>
+        <p class="diff">Begin Your Journey</p>
         <p>
             Take the first step toward becoming a certified yoga instructor with our
             200 Hour Hybrid Multistyle Yoga Teacher Training in Rishikesh, India.

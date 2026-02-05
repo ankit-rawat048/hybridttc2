@@ -144,6 +144,8 @@ h1, h2, h3, h4, h5 {
 
 .diff{
     color:#000;
+    text-decoration: double;
+    font-size:25px;
 }
 
 
