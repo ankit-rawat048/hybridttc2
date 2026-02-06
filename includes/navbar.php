@@ -35,11 +35,12 @@
     /* OPEN BUTTON */
     #navBtn {
         height: 150px;
-        width: 343px;
-        font-size: 70px;
+        width: 100%;
+        font-size: 3.5rem;
         background: #ffc000;
         color: #fff;
         border: none;
+        padding: 10px;
         text-transform: uppercase;
         font-family: fantasy;
         cursor: pointer;
@@ -49,7 +50,7 @@
     .nav {
         visibility: hidden;
         opacity: 0;
-        width: 50%;
+        width: 100%;
         transition: opacity 0.3s ease, visibility 0.3s ease;
     }
 
@@ -86,6 +87,7 @@
     .nav-controls {
         display: flex;
         gap: 10px;
+        width: 50%;
         margin-top: 10px;
         justify-content: space-between;
     }
@@ -96,6 +98,10 @@
         font-size: 18px;
         background: #000;
         color: #fff;
+    }
+    
+    @media(max-width: 768px) {
+        
     }
 </style>
 
