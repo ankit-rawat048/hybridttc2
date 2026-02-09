@@ -15,19 +15,20 @@
         }
 
         body {
-            font-family: Inter, Arial, sans-serif;
+            font-family:'Montserrat';
             overflow: hidden;
         }
 
         #bgImg {
-            inset: 0;
-            background-size: cover;
-            background-position: center;
-            z-index: 1;
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-            padding: 0 0 0 80px;
+            position: relative;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    /*padding: 0 0 0 80px;*/
         }
 
         .bg-actions {
@@ -48,17 +49,17 @@
 ===================== */
         .main {
             position: relative;
-            z-index: 5;
-            width: 100%;
-            height: 100vh;
-            display: flex;
+    z-index: 5;
+    width: 100%;
+    height: 100vh;
+    display: flex;
         }
 
         .newnav {
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            padding-bottom: 100px;
+            padding:0 0 100px 80px;
             gap: 10px;
         }
 
@@ -87,7 +88,7 @@
             position: absolute;
             right: -100%;
             top: 0;
-            background: rgb(255 192 0);
+            background: #C46A4A;
             padding-right: 10%;
             transition: right 0.6s ease;
             display: block;
@@ -145,6 +146,8 @@
             transition: right 1s ease;
             animation: fadeout .4s ease forwards;
             opacity: 0.3;
+            width: 300px;
+            height: 300px;
         }
 
         @keyframes fadeIn {
@@ -180,9 +183,26 @@
         }
 
         .social-list i {
-            color: #ffc000;
+            color: #e25725;
         }
+        
+        .overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none; /* allows clicks to pass through */
+}
 
+.overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.newnav, .contentbar {
+    z-index:4;
+}
         @media (max-width: 600px) {
             .main {
                 justify-content: center;
@@ -194,6 +214,7 @@
 
             .newnav {
                 width:80%;
+                padding: 0 0 100px 0px;
             }
 
             /* MOBILE CONTENT BAR */
@@ -234,7 +255,8 @@
             .copyright {
                 padding: 0;
             }
-}
+            
+        }
     </style>
 </head>
 
@@ -244,6 +266,10 @@
     <div id="bgImg">
         <!-- MAIN UI -->
         <div class="main">
+            
+            <div class="overlay">
+                <img src="images/background_overlay.png">
+            </div>
 
             <div class="newnav">
                 <!-- NAVBAR -->
@@ -258,7 +284,7 @@
 
             <!-- CONTENT BAR -->
             <div class="contentbar" id="contentbar">
-                <img src="https://quanticalabs.com/Nostalgia/Template/image/icon/icon-content/content_icon_features_right.png"
+                <img src="images/chakra_PNG9.png"
                     class="abslute-cls" alt="">
 
                 <button class="closeContent" id="closeContent"><i class="fa-solid fa-xmark"></i></button>
@@ -312,9 +338,9 @@
         const actions = document.getElementById("actions");
 
         const images = [
-            "xajf62.webp",
-            "images.jpg",
-            "images (1).jpg"
+            "200HoursYttcRishikesh.png",
+            "UntitledDesign2.png",
+            "UntitledDesign3.png"
         ];
 
         let index = 0;

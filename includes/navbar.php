@@ -1,5 +1,10 @@
 <div class="navdiv">
 
+    <img src="images/click_here_arrow_2.png"
+         alt="clickHereArrow"
+         class="hereArrow"
+         id="hereArrow">
+
     <div class="nav" id="nav">
 
         <ul class="navbar" id="navList">
@@ -30,6 +35,7 @@
         gap: 20px;
         justify-content: center;
         align-items: flex-start;
+        position: relative; /* anchor for arrow */
     }
 
     /* OPEN BUTTON */
@@ -37,7 +43,7 @@
         height: 150px;
         width: 100%;
         font-size: 3.5rem;
-        background: #ffc000;
+        background: #C46A4A;
         color: #fff;
         border: none;
         padding: 10px;
@@ -75,12 +81,11 @@
 
     .nav li {
         background: #000;
-        padding: 6px 0px;
-        /* font-size: 30px; */
+        padding: 6px 0;
         cursor: pointer;
         color: #fff;
         text-transform: uppercase;
-        font-family: fangsong;
+        font-family: 'Cormorant Garamond';
     }
 
     /* CONTROLS */
@@ -99,9 +104,24 @@
         background: #000;
         color: #fff;
     }
-    
-    @media(max-width: 768px) {
-        
+
+    /* ARROW */
+    .hereArrow {
+        position: absolute;
+        bottom: 170px;          /* sits above the button */
+        left: 90%;
+        transform: translateX(-50%);
+        pointer-events: none;
+        animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+        0%, 100% { transform: translate(-50%, 0); }
+        50% { transform: translate(-50%, -12px); }
+    }
+
+    @media (max-width: 768px) {
+        /* no changes needed */
     }
 </style>
 
@@ -112,19 +132,22 @@
     const scrollDown = document.getElementById('scrollDown');
     const nav = document.getElementById('nav');
     const navList = document.getElementById('navList');
+    const hereArrow = document.getElementById('hereArrow');
 
     /* OPEN / CLOSE */
-    
     openNav.addEventListener('click', () => {
-        if(nav.classList.contains('show')){
-            nav.classList.remove('show');
+        nav.classList.toggle('show');
+
+        if (nav.classList.contains('show')) {
+            hereArrow.style.display = "none";
         } else {
-            nav.classList.add('show');
-        };
-  });
+            hereArrow.style.display = "block";
+        }
+    });
 
     closeNav.addEventListener('click', () => {
         nav.classList.remove('show');
+        hereArrow.style.display = "block";
     });
 
     /* SCROLL CONTROLS */
